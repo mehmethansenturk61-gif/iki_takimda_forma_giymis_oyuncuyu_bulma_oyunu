@@ -1,16 +1,41 @@
-# React + Vite
+# ⚽ Futbolcu Tahmin Oyunu
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+İki kulüp gösterilir, ortak oynamış bir futbolcuyu (ipucu, çoktan seçmeli veya doğrudan yazarak) tahmin edersin. Tek kişilik pratik modu ve arkadaşınla aynı soruları çözüp skorları karşılaştırabileceğin oda kodlu çok kişilik mod içerir.
 
-Currently, two official plugins are available:
+## Özellikler
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- 260 kulüplük veritabanı, gerçek amblemlerle (Wikipedia + TheSportsDB üzerinden otomatik çekilir)
+- Tek kişilik mod: süreye karşı, zorluk seviyesi seçilebilir (Kolay / Orta / Zor)
+- Yazarak cevaplama veya 4 seçenekli çoktan seçmeli mod
+- Arkadaşla oda kodu ile eşleşip aynı soruları çözme, skor karşılaştırma
+- En yüksek skor, seri (streak) takibi, oyuncu profili/avatar
 
-## React Compiler
+## Kullanılan Teknolojiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React (hooks: `useState`, `useEffect`, `useRef`, `useCallback`)
+- [lucide-react](https://lucide.dev/) ikon seti
+- Vite (geliştirme/derleme aracı)
 
-## Expanding the Oxlint configuration
+## Kurulum ve Çalıştırma
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```bash
+npm install
+npm run dev
+```
+
+Tarayıcıda `http://localhost:5173` adresini aç.
+
+## Nasıl Oynanır?
+
+1. Ana menüden **Tek Kişilik** veya **Arkadaşınla Oyna**'yı seç.
+2. Ekranda gösterilen iki kulüpte birlikte oynamış bir futbolcuyu bul.
+3. Yazarak ya da 4 seçenekten doğru olanı işaretleyerek cevapla.
+4. Süre bitmeden ne kadar çok doğru bilirsen skorun o kadar yüksek olur.
+
+## Katkı
+
+Pull request'ler ve öneriler memnuniyetle karşılanır. Yeni kulüp/oyuncu eklemek için ilgili veri dizilerini (`CLUBS`, `PLAYERS`) düzenleyip PR açabilirsin.
+
+## Lisans
+
+Bu proje kişisel/eğitim amaçlı geliştirilmiştir. Kulüp amblemleri ilgili kulüplerin tescilli markalarıdır ve Wikipedia/TheSportsDB üzerinden çalışma zamanında (runtime) çekilir; repo içinde saklanmaz.
